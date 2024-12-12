@@ -25,5 +25,8 @@ RUN crontab /etc/cron.d/classeviva-cron
 # Make the script executable
 RUN chmod +x ./classevivaSync.py
 
+# Run the script
+RUN python ./classevivaSync.py
+
 # Command to run cron in the foreground
 CMD ["cron", "-f"]
