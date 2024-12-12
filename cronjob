@@ -1,1 +1,1 @@
-0 */1 * * * python3 /app/classevivaSync.py >> /var/log/classeviva.log 2>&1
+0 */1 * * * "python3 /app/classevivaSync.py" >> /var/log/classeviva.log 2>&1
