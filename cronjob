@@ -1,0 +1,1 @@
+0 */4 * * * python /app/classevivaSync.py >> /var/log/classeviva.log 2>&1

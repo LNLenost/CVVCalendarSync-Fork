@@ -1,71 +1,3 @@
-# To obtain the 
-
-# calendar_id
-
-#  and 
-
-# credentials_file
-
-#  for integrating with Google Calendar API, follow these steps:
-
-# ### 1. Getting the 
-
-# calendar_id
-
-
-
-# 1. **Go to Google Calendar**: Open [Google Calendar](https://calendar.google.com/).
-# 2. **Create a New Calendar** (if you don't have one): 
-#    - Click on the gear icon (Settings) in the top right corner.
-#    - Select "Settings".
-#    - On the left sidebar, click on "Add calendar" and then "Create new calendar".
-#    - Fill in the details and click "Create calendar".
-# 3. **Find the Calendar ID**:
-#    - In the settings, click on the name of the calendar you want to use under "Settings for my calendars".
-#    - Scroll down to the "Integrate calendar" section.
-#    - The `Calendar ID` will be listed there. It usually looks like `your_calendar_id@group.calendar.google.com`.
-
-# ### 2. Getting the 
-
-# credentials_file
-
-
-
-# 1. **Go to Google Cloud Console**: Open [Google Cloud Console](https://console.cloud.google.com/).
-# 2. **Create a New Project** (if you don't have one):
-#    - Click on the project dropdown at the top and select "New Project".
-#    - Fill in the project details and click "Create".
-# 3. **Enable Google Calendar API**:
-#    - In the left sidebar, go to "APIs & Services" > "Library".
-#    - Search for "Google Calendar API" and click on it.
-#    - Click "Enable".
-# 4. **Create Service Account Credentials**:
-#    - Go to "APIs & Services" > "Credentials".
-#    - Click "Create Credentials" and select "Service account".
-#    - Fill in the service account details and click "Create".
-#    - In the "Service account permissions" step, you can skip it or assign roles as needed.
-#    - In the "Grant users access to this service account" step, click "Done".
-# 5. **Generate Key File**:
-#    - After creating the service account, click on it in the "Service accounts" list.
-#    - Go to the "Keys" tab.
-#    - Click "Add Key" > "Create new key".
-#    - Select "JSON" and click "Create".
-#    - A JSON file will be downloaded. This is your 
-
-# credentials_file
-
-# .
-
-# ### Using the Values in Your Code
-
-# Replace the placeholders in your code with the actual values:
-
-# ```python
-# calendar_id = "your_actual_calendar_id@group.calendar.google.com"
-# credentials_file = "path_to_your_downloaded_service_account_credentials.json"
-# ```
-
-# Make sure to keep your credentials file secure and do not share it publicly.
 import datetime
 import requests
 import json
@@ -178,8 +110,6 @@ def get_periods(student_id, token):
         response.raise_for_status()
 
 
-# Example usage
-# Example usage
 if __name__ == "__main__":
     config_file=".\\config.json"
     with open(config_file) as f:
