@@ -3,3 +3,6 @@ A Python script with docker container to sync Classeviva's Agenda with Google Ca
 
 # Installtion and Usage
 [See wiki](https://github.com/LucaCraft89/CVVCalendarSync/wiki/Installation)
+
+## References
+- [Classeviva-Official-Endpoints](https://github.com/Lioydiano/Classeviva-Official-Endpoints) 
