@@ -111,7 +111,7 @@ def get_periods(student_id, token):
 
 
 if __name__ == "__main__":
-    config_file=".\\config.json"
+    config_file="config.json"
     with open(config_file) as f:
         config = json.load(f)
     user_id = config["user_id"]
