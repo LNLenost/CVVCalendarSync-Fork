@@ -1,3 +1,4 @@
+![banner.png](https://github.com/LucaCraft89/CVVCalendarSync/blob/main/banner.png?raw=truet)
 # CVVCalendarSync
 A Python script with docker container to sync Classeviva's Agenda with Google Calendar, Dockerized with cron to run evry 4 hours not to exced API rate limits
 
