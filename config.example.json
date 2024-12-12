@@ -1,0 +1,6 @@
+{
+    "user_id": "your_user_id",
+    "user_pass": "your_user_pass",
+    "calendar_id": "your_calendar_id",
+    "credentials_file": "credentials.json"
+}
