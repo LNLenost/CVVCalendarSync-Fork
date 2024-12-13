@@ -1,4 +1,5 @@
 import datetime
+import os
 import requests
 import json
 from google.oauth2 import service_account
@@ -111,14 +112,22 @@ def get_periods(student_id, token):
 
 
 if __name__ == "__main__":
-    config_file="config.json"
+    # check if /app directory exits
+    if os.path.isdir("/app"):
+        config_file="/app/config.json"
+    else:
+        config_file="config.json"
     with open(config_file) as f:
         config = json.load(f)
     user_id = config["user_id"]
     user_pass = config["user_pass"]
     calendar_id = config["calendar_id"]
     credentials_file = config["credentials_file"]
-    
+    if os.path.isdir("/app"):
+        credentials_file="/app/"+credentials_file
+    else:
+            credentials_file = config["credentials_file"]
+
     stuent_id = "".join(filter(str.isdigit, user_id))
 
     try:
