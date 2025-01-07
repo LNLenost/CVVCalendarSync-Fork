@@ -106,6 +106,7 @@ def get_periods(student_id, token):
     response = requests.get(url, headers=headers)
     
     if response.status_code == 200:
+        print(json.dumps(response.json(), indent=4))
         return response.json()
     else:
         response.raise_for_status()
@@ -139,13 +140,8 @@ if __name__ == "__main__":
         # print(f"Token: {token}")
         print("Logged in successfully " + login_response["firstName"] + " " + login_response["lastName"])
         periods = get_periods(stuent_id, token)
-        for period in periods["periods"]:
-            if period["dateEnd"] :
-                current_date = datetime.datetime.now().strftime("%Y-%m-%d")
-                if period["dateStart"] <= current_date <= period["dateEnd"]:
-                    periodStart = period["dateStart"]
-                    periodEnd = period["dateEnd"]
-                break
+        periodStart = periods["periods"][0]["dateStart"]
+        periodEnd = periods["periods"][-1]["dateEnd"]
         periodStart = periodStart.replace("-", "")
         periodEnd = periodEnd.replace("-", "")
         agenda = get_agenda(stuent_id, periodStart, periodEnd, token)
